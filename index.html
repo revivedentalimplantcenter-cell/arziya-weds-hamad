@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arziya Azmeen weds Mohammed Hamad Nabeel — Nikah Invitation · 7 January 2027 · Karimnagar</title>
+<meta name="description" content="With the blessings of Allah, Shaik Hyder & Naziya Azmeen cordially invite you to the Nikah of their daughter Arziya Azmeen with Mohammed Hamad Nabeel on Thursday, 7 January 2027 at Karimnagar.">
+<meta property="og:title" content="Arziya Azmeen weds Mohammed Hamad Nabeel">
+<meta property="og:description" content="Nikah Ceremony · Thursday, 7 January 2027 · Karimnagar. Your presence and duas are requested.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --emerald-950:#04231a;
+    --emerald-900:#063527;
+    --emerald-800:#0a4a36;
+    --gold:#c9a227;
+    --gold-light:#ecd28a;
+    --gold-pale:#f5e7bd;
+    --ivory:#fbf7ec;
+    --ink:#22302a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--emerald-950);
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+
+  /* ---------- Opening overlay ---------- */
+  #opener{
+    position:fixed;inset:0;z-index:100;
+    background:
+      radial-gradient(ellipse at 50% 30%, rgba(201,162,39,.16), transparent 60%),
+      linear-gradient(160deg,#063527 0%, #04231a 55%, #03170f 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:24px;cursor:pointer;
+    transition:opacity .9s ease, visibility .9s;
+  }
+  #opener.opened{opacity:0;visibility:hidden;pointer-events:none;}
+  #opener .bismillah{font-family:'Amiri',serif;color:var(--gold-light);font-size:clamp(26px,6vw,40px);margin-bottom:18px;}
+  #opener .mono{
+    width:118px;height:118px;border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Great Vibes',cursive;font-size:44px;color:var(--gold-pale);
+    background:rgba(201,162,39,.07);
+    box-shadow:0 0 0 8px rgba(201,162,39,.06), 0 0 44px rgba(201,162,39,.25);
+    margin-bottom:26px;
+  }
+  #opener h1{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ivory);font-size:clamp(26px,6vw,42px);letter-spacing:.04em;line-height:1.25;}
+  #opener h1 span{color:var(--gold-light);font-family:'Great Vibes',cursive;font-weight:400;font-size:1.25em;padding:0 .15em;}
+  #opener .odate{margin-top:14px;color:#cfd8ce;letter-spacing:.35em;text-transform:uppercase;font-size:12px;font-weight:300;}
+  #opener .tap{
+    margin-top:44px;display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--gold);color:var(--gold-pale);
+    padding:13px 34px;border-radius:999px;font-size:13px;letter-spacing:.28em;text-transform:uppercase;
+    background:rgba(201,162,39,.08);animation:pulse 2.2s infinite;
+  }
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,.35);}50%{box-shadow:0 0 0 14px rgba(201,162,39,0);}}
+
+  /* ---------- Petals ---------- */
+  .petal{position:fixed;top:-4vh;z-index:60;pointer-events:none;opacity:0;
+    width:12px;height:16px;border-radius:80% 0 80% 0;
+    background:linear-gradient(135deg,var(--gold-light),var(--gold));
+    animation:fall linear infinite;}
+  @keyframes fall{
+    0%{transform:translate3d(0,-4vh,0) rotate(0deg);opacity:0;}
+    8%{opacity:.75;}
+    100%{transform:translate3d(var(--sway,30px),104vh,0) rotate(660deg);opacity:.15;}
+  }
+
+  /* ---------- Page frame ---------- */
+  .page{
+    max-width:860px;margin:0 auto;background:var(--ivory);
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(201,162,39,.08), transparent 42%),
+      radial-gradient(circle at 88% 92%, rgba(10,74,54,.07), transparent 45%);
+    box-shadow:0 0 80px rgba(0,0,0,.55);
+    position:relative;
+  }
+  .frame{border:1px solid rgba(201,162,39,.55);margin:14px;padding:clamp(28px,6vw,64px) clamp(20px,6vw,60px);position:relative;}
+  .frame::before{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,39,.35);pointer-events:none;}
+  section{text-align:center;position:relative;z-index:1;}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s ease;}
+  .reveal.visible{opacity:1;transform:none;}
+
+  .bismillah{font-family:'Amiri',serif;font-size:clamp(30px,7vw,46px);color:var(--emerald-800);line-height:1.6;}
+  .bismillah-sub{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#8a6d1d;margin-top:6px;font-weight:400;}
+  .verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4.4vw,21px);color:#43544b;line-height:1.75;max-width:560px;margin:26px auto 0;}
+  .verse-ref{margin-top:10px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:38px auto;max-width:420px;}
+  .orn::before,.orn::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  .orn .diamond{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(201,162,39,.18);}
+  .orn .diamond.small{width:5px;height:5px;}
+
+  .invite-lead{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#7c6a35;font-weight:500;line-height:2;}
+  .parents{font-family:'Cormorant Garamond',serif;font-size:clamp(21px,5.4vw,28px);font-weight:600;color:var(--emerald-900);line-height:1.5;margin-top:10px;}
+  .parents .amp{font-family:'Great Vibes',cursive;color:var(--gold);font-weight:400;padding:0 .1em;}
+  .invite-mid{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4.4vw,20px);color:#43544b;line-height:1.7;max-width:520px;margin:16px auto 0;}
+
+  .daughter-label,.son-label{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8a6d1d;font-weight:500;}
+  .name{
+    font-family:'Cormorant Garamond',serif;font-weight:700;
+    font-size:clamp(42px,11vw,72px);line-height:1.12;letter-spacing:.01em;
+    background:linear-gradient(100deg,#8a6d1d 0%, var(--gold) 30%, #a8842a 55%, var(--gold-light) 80%, #8a6d1d 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+    margin:8px 0 2px;
+  }
+  .weds{font-family:'Great Vibes',cursive;font-size:clamp(34px,8vw,50px);color:var(--emerald-800);margin:16px 0 10px;}
+  .of-parents{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,4.6vw,21px);color:#43544b;font-weight:500;}
+
+  /* ---------- Date card ---------- */
+  .date-card{
+    margin:8px auto 0;max-width:560px;
+    background:linear-gradient(165deg,var(--emerald-900),var(--emerald-950));
+    border:1px solid rgba(201,162,39,.6);border-radius:18px;
+    padding:38px 26px 34px;color:var(--ivory);
+    box-shadow:0 24px 50px rgba(4,35,26,.35);
+    position:relative;overflow:hidden;
+  }
+  .date-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,162,39,.35);border-radius:12px;pointer-events:none;}
+  .date-card .ceremony{font-family:'Great Vibes',cursive;font-size:34px;color:var(--gold-light);}
+  .date-row{display:flex;align-items:center;justify-content:center;gap:clamp(14px,5vw,34px);margin-top:18px;}
+  .date-side{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#d9e2d5;border-top:1px solid rgba(201,162,39,.5);border-bottom:1px solid rgba(201,162,39,.5);padding:9px 2px;min-width:96px;}
+  .date-num{font-family:'Cormorant Garamond',serif;font-size:78px;font-weight:700;line-height:1;color:var(--gold-pale);}
+  .date-full{margin-top:16px;font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.06em;}
+  .venue{margin-top:8px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-light);font-weight:500;}
+  .venue-sub{margin-top:5px;font-size:12px;color:#b9c6b4;letter-spacing:.12em;}
+
+  /* ---------- Countdown ---------- */
+  .count-title{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#7c6a35;font-weight:500;margin-bottom:18px;}
+  .count{display:flex;justify-content:center;gap:clamp(10px,3.4vw,20px);flex-wrap:wrap;}
+  .count .cell{
+    width:clamp(70px,18vw,92px);padding:16px 4px 13px;border-radius:14px;
+    background:#fff;border:1px solid rgba(201,162,39,.55);
+    box-shadow:0 10px 24px rgba(6,53,39,.10);
+  }
+  .count .num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--emerald-900);line-height:1;}
+  .count .lbl{margin-top:6px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#8a6d1d;}
+
+  /* ---------- Buttons ---------- */
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:6px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+    padding:14px 30px;border-radius:999px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{background:linear-gradient(120deg,#a8842a,var(--gold) 45%,var(--gold-light));color:#2c2103;box-shadow:0 12px 26px rgba(201,162,39,.35);}
+  .btn-outline{border:1.5px solid var(--emerald-800);color:var(--emerald-800);background:transparent;}
+  .btn svg{width:16px;height:16px;flex:none;}
+
+  /* ---------- Family ---------- */
+  .family-title{font-family:'Great Vibes',cursive;font-size:clamp(32px,7.4vw,42px);color:var(--emerald-800);}
+  .family-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#43544b;margin-top:6px;}
+  .family-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px;}
+  .family-grid .person{
+    font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--emerald-900);
+    border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:9px 24px;background:rgba(255,255,255,.65);
+  }
+
+  .dua-ar{font-family:'Amiri',serif;font-size:clamp(22px,5.6vw,30px);color:var(--emerald-800);line-height:2;}
+  .dua-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#43544b;max-width:520px;margin:10px auto 0;line-height:1.7;}
+
+  footer{text-align:center;padding:8px 20px 6px;}
+  footer .foot-names{font-family:'Great Vibes',cursive;font-size:30px;color:var(--emerald-800);}
+  footer .foot-line{margin-top:8px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8a6d1d;}
+  footer .foot-note{margin-top:14px;font-size:12.5px;color:#6b7a6e;line-height:1.8;}
+</style>
+</head>
+<body>
+
+<!-- Opening overlay -->
+<div id="opener" role="button" aria-label="Open the invitation">
+  <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <div class="mono">A&nbsp;·&nbsp;H</div>
+  <h1>Arziya Azmeen <span>weds</span> Mohammed Hamad Nabeel</h1>
+  <div class="odate">7 · January · 2027 — Karimnagar</div>
+  <div class="tap">✦ &nbsp;Tap to Open Invitation&nbsp; ✦</div>
+</div>
+
+<div class="page">
+  <div class="frame">
+
+    <!-- Bismillah & verse -->
+    <section class="reveal">
+      <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div class="bismillah-sub">In the name of Allah, the Most Gracious, the Most Merciful</div>
+      <p class="verse">“And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquillity with them, and He has put love and mercy between your hearts.”</p>
+      <div class="verse-ref">— Surah Ar-Rum · 30:21 —</div>
+    </section>
+
+    <div class="orn reveal"><span class="diamond small"></span><span class="diamond"></span><span class="diamond small"></span></div>
+
+    <!-- Invitation -->
+    <section class="reveal">
+      <div class="invite-lead">With the blessings of Allah (SWT)</div>
+      <div class="parents">Mr. Shaik Hyder <span class="amp">&amp;</span> Mrs. Naziya Azmeen</div>
+      <p class="invite-mid">request the honour of your gracious presence and duas at the Nikah ceremony of their beloved daughter</p>
+
+      <div style="margin-top:36px;">
+        <div class="daughter-label">The Bride</div>
+        <div class="name">Arziya Azmeen</div>
+      </div>
+
+      <div class="weds">weds</div>
+
+      <div>
+        <div class="son-label">The Groom</div>
+        <div class="name">Mohammed Hamad Nabeel</div>
+        <div class="of-parents">Son of Mr. Mohammed Abdul Wahed Jameel &amp; Mrs. Parveen Sulthana</div>
+      </div>
+    </section>
+
+    <div class="orn reveal"><span class="diamond small"></span><span class="diamond"></span><span class="diamond small"></span></div>
+
+    <!-- Date & venue -->
+    <section class="reveal">
+      <div class="date-card">
+        <div class="ceremony">The Nikah Ceremony</div>
+        <div class="date-row">
+          <div class="date-side">Thursday</div>
+          <div class="date-num">7</div>
+          <div class="date-side">January</div>
+        </div>
+        <div class="date-full">Thursday, 7th January 2027</div>
+        <div class="venue">Karimnagar</div>
+        <div class="venue-sub">Telangana, India</div>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="reveal" style="margin-top:46px;">
+      <div class="count-title">Counting down to the blessed day</div>
+      <div class="count" id="countdown">
+        <div class="cell"><div class="num" id="cd-days">–</div><div class="lbl">Days</div></div>
+        <div class="cell"><div class="num" id="cd-hours">–</div><div class="lbl">Hours</div></div>
+        <div class="cell"><div class="num" id="cd-mins">–</div><div class="lbl">Minutes</div></div>
+        <div class="cell"><div class="num" id="cd-secs">–</div><div class="lbl">Seconds</div></div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="reveal" style="margin-top:40px;">
+      <div class="btns">
+        <a class="btn btn-gold" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikah%20%E2%80%94%20Arziya%20Azmeen%20weds%20Mohammed%20Hamad%20Nabeel&dates=20270107/20270108&details=Nikah%20ceremony%20of%20Arziya%20Azmeen%20(daughter%20of%20Shaik%20Hyder%20%26%20Naziya%20Azmeen)%20with%20Mohammed%20Hamad%20Nabeel%20(son%20of%20Mohammed%20Abdul%20Wahed%20Jameel%20%26%20Parveen%20Sulthana).&location=Karimnagar%2C%20Telangana">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Save the Date
+        </a>
+        <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Karimnagar%2C+Telangana">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          View Location
+        </a>
+      </div>
+    </section>
+
+    <div class="orn reveal"><span class="diamond small"></span><span class="diamond"></span><span class="diamond small"></span></div>
+
+    <!-- Family -->
+    <section class="reveal">
+      <div class="family-title">With Heartfelt Invitation From</div>
+      <div class="family-sub">together with family &amp; friends, we warmly welcome you</div>
+      <div class="family-grid">
+        <span class="person">Md Yousuf</span>
+        <span class="person">Md Raheem</span>
+        <span class="person">Md Sadhupasha</span>
+        <span class="person">Md Asif</span>
+        <span class="person">Reshma</span>
+        <span class="person">Md Zameer</span>
+        <span class="person">Md Zakir</span>
+      </div>
+    </section>
+
+    <div class="orn reveal"><span class="diamond small"></span><span class="diamond"></span><span class="diamond small"></span></div>
+
+    <!-- Dua -->
+    <section class="reveal">
+      <div class="dua-ar">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+      <p class="dua-en">“May Allah bless you both, shower His blessings upon you, and unite you both in goodness.”</p>
+    </section>
+
+    <footer class="reveal" style="margin-top:44px;">
+      <div class="foot-names">Arziya &amp; Hamad</div>
+      <div class="foot-line">7 · 01 · 2027 — Karimnagar</div>
+      <p class="foot-note">Your presence and heartfelt duas are the most precious gift to the couple.<br>We look forward to celebrating this blessed occasion with you.</p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  // Opening overlay
+  var opener = document.getElementById('opener');
+  function openInvite(){ opener.classList.add('opened'); document.body.style.overflow=''; }
+  opener.addEventListener('click', openInvite);
+  document.body.style.overflow = 'hidden';
+  setTimeout(function(){ if(!opener.classList.contains('opened')){ /* stays until tapped */ } }, 10);
+
+  // Countdown to 7 Jan 2027, 00:00 IST
+  var target = new Date('2027-01-07T00:00:00+05:30').getTime();
+  function pad(n){ return (n<10?'0':'')+n; }
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      document.getElementById('cd-days').textContent='0';
+      document.getElementById('cd-hours').textContent='00';
+      document.getElementById('cd-mins').textContent='00';
+      document.getElementById('cd-secs').textContent='00';
+      return;
+    }
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor(diff%86400000/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hours').textContent = pad(h);
+    document.getElementById('cd-mins').textContent = pad(m);
+    document.getElementById('cd-secs').textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // Falling gold petals
+  (function(){
+    for(var i=0;i<14;i++){
+      var p=document.createElement('span');
+      p.className='petal';
+      p.style.left=(Math.random()*100)+'vw';
+      p.style.setProperty('--sway', (Math.random()*120-60)+'px');
+      p.style.animationDuration=(9+Math.random()*10)+'s';
+      p.style.animationDelay=(Math.random()*12)+'s';
+      p.style.transform='scale('+(0.6+Math.random()*0.9)+')';
+      document.body.appendChild(p);
+    }
+  })();
+</script>
+</body>
+</html>
